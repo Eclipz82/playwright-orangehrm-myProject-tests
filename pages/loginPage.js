@@ -1,5 +1,3 @@
-const { expect } = require('@playwright/test');
-
 class LoginPage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -21,14 +19,6 @@ class LoginPage {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
     await this.loginButton.click();
-  }
-
-  async assertDashboardVisible() {
-    await expect(this.dashboardHeader).toHaveText('Dashboard');
-  }
-
-  async assertErrorVisible(message) {
-    await expect(this.errorMessage).toHaveText(message);
   }
 }
 
