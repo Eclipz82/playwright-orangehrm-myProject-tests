@@ -8,7 +8,9 @@ class LoginPage {
     this.passwordInput = page.locator('input[name="password"]');
     this.loginButton = page.locator('button[type="submit"]');
     this.dashboardHeader = page.locator('h6'); // заголовок Dashboard
-    this.errorMessage = page.locator('.oxd-alert-content-text'); // сообщение об ошибке
+    this.errorMessage = page.locator('.oxd-alert-content-text'); 
+    this.requiredFieldErrors = page.getByText('Required');
+    this.forgotPasswordLink = page.getByText('Forgot your password?');
   }
 
   async goto() {
